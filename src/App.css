@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+
+input {
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: seagreen;
+
+
+}
