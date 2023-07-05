@@ -1,11 +1,19 @@
 import './App.css';
-import { useState } from 'react';
-import {pokeData} from './helper/pokeData'
+import { useState, useEffect } from 'react';
+//import {pokeData} from './helper/pokeData'
+import axios from 'axios';
 
 function App() {
   const [search, setSearch]=useState("");
   const [currentpage, setCurrentpage]=useState(1);
   const pagesize=10;
+
+  const [pokeData, setPokeData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/pokemon')
+      .then((res) => setPokeData(res.data));
+  }, []);
   
 
   
